@@ -1,11 +1,11 @@
 /*!
- * ngImgCropExtended v0.4.7
+ * ngImgCropExtendedDrmc v0.4.7
  * https://github.com/CrackerakiUA/ngImgCropExtended/
  *
  * Copyright (c) 2015 undefined
  * License: MIT
  *
- * Generated at Tuesday, December 8th, 2015, 12:29:30 AM
+ * Generated at Monday, December 14th, 2015, 8:49:34 PM
  */
 (function() {
 var crop = angular.module('ngImgCrop', []);
@@ -2657,24 +2657,24 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function($timeo
         scope: {
             image: '=',
             resultImage: '=',
-            resultArrayImage: '=',
-            resultBlob: '=',
-            urlBlob: '=',
-            chargement: '=',
+            resultArrayImage: '=?',
+            resultBlob: '=?',
+            urlBlob: '=?',
+            chargement: '=?',
             
-            changeOnFly: '=',
-            areaCoords: '=',
+            changeOnFly: '=?',
+            areaCoords: '=?',
             areaType: '@',
-            areaMinSize: '=',
-            resultImageSize: '=',
-            resultImageFormat: '=',
-            resultImageQuality: '=',
+            areaMinSize: '=?',
+            resultImageSize: '=?',
+            resultImageFormat: '=?',
+            resultImageQuality: '=?',
 
-            aspectRatio: '=',
+            aspectRatio: '=?',
             
-            dominantColor: '=',
-            paletteColor: '=',
-            paletteColorLength: '=',
+            dominantColor: '=?',
+            paletteColor: '=?',
+            paletteColorLength: '=?',
 
             onChange: '&',
             onLoadBegin: '&',
@@ -2713,12 +2713,14 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function($timeo
                             scope.urlBlob = urlCreator.createObjectURL(blob);
                         });
 
-                        cropHost.getDominantColor(scope.resultImage).then(function(dominantColor) {
-                            scope.dominantColor = dominantColor;
-                        });
-                        cropHost.getPalette(scope.resultImage).then(function(palette) {
-                            scope.paletteColor = palette;
-                        });
+                        if (scope.resultImage) {
+                            cropHost.getDominantColor(scope.resultImage).then(function(dominantColor) {
+                                scope.dominantColor = dominantColor;
+                            });
+                            cropHost.getPalette(scope.resultImage).then(function(palette) {
+                                scope.paletteColor = palette;
+                            });
+                        }
 
                         updateAreaCoords(scope);
                         scope.onChange({
