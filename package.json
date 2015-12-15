@@ -22,10 +22,10 @@
     "version": "0.4.7",
     "description": "Image crop directive for AngularJS, square, circle and rectangle areas. Working aspect.",
     "license": "MIT",
-    "homepage": "https://github.com/CrackerakiUA/ngImgCropExtended/",
+    "homepage": "https://github.com/drmikecrowe/ngImgCropExtended/",
     "repository": {
         "type": "git",
-        "url": "https://github.com/CrackerakiUA/ngImgCropExtended/"
+        "url": "https://github.com/drmikecrowe/ngImgCropExtended/"
     },
     "dependencies": {},
     "devDependencies": {
