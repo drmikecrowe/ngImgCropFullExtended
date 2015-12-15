@@ -312,7 +312,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
             }
             temp_canvas.toBlob(function(blob) {
                 _p.resolve(blob);
-            });
+            }, resImgFormat);
             return _p.promise;
         };
 
