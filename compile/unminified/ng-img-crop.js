@@ -1,11 +1,11 @@
 /*!
  * ngImgCropExtendedDrmc v0.4.7
- * https://github.com/CrackerakiUA/ngImgCropExtended/
+ * https://github.com/drmikecrowe/ngImgCropExtended/
  *
  * Copyright (c) 2015 undefined
  * License: MIT
  *
- * Generated at Tuesday, December 15th, 2015, 8:06:21 AM
+ * Generated at Tuesday, December 15th, 2015, 3:30:58 PM
  */
 (function() {
 var crop = angular.module('ngImgCrop', []);
@@ -2272,7 +2272,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
             }
             temp_canvas.toBlob(function(blob) {
                 _p.resolve(blob);
-            });
+            }, resImgFormat);
             return _p.promise;
         };
 
