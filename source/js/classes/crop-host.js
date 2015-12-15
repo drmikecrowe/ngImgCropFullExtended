@@ -39,7 +39,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
             maxCanvasDims = [300, 300],
 
             // Result Image size
-            resImgSizeArray = [];
+            resImgSizeArray = [],
             resImgSize = {
                 w: 200,
                 h: 200

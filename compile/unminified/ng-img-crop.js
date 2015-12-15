@@ -5,7 +5,7 @@
  * Copyright (c) 2015 undefined
  * License: MIT
  *
- * Generated at Monday, December 14th, 2015, 8:49:34 PM
+ * Generated at Tuesday, December 15th, 2015, 8:06:21 AM
  */
 (function() {
 var crop = angular.module('ngImgCrop', []);
@@ -1999,7 +1999,7 @@ crop.factory('cropHost', ['$document', '$q', 'cropAreaCircle', 'cropAreaSquare',
             maxCanvasDims = [300, 300],
 
             // Result Image size
-            resImgSizeArray = [];
+            resImgSizeArray = [],
             resImgSize = {
                 w: 200,
                 h: 200
