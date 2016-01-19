@@ -5,7 +5,7 @@
  * Copyright (c) 2016 undefined
  * License: MIT
  *
- * Generated at Tuesday, January 19th, 2016, 5:26:34 PM
+ * Generated at Tuesday, January 19th, 2016, 5:45:12 PM
  */
 (function() {
 var crop = angular.module('ngImgCrop', []);
@@ -3599,9 +3599,13 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function($timeo
     } else if (typeof exports === 'object') {
         module.exports = ColorThief; // for CommonJS
     } else {
-        this.ColorThief = ColorThief;
+        if ( typeof this != 'undefined' ) {
+            this.ColorThief = ColorThief;
+        } else {
+            window.ColorThief = ColorThief;
+        }
     }
-}.call(window));
+}.call(this));
 
 }());
 
@@ -4668,10 +4672,15 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function($timeo
   } else if (typeof exports === 'object') {
     module.exports = MegaPixImage; // for CommonJS
   } else {
-    this.MegaPixImage = MegaPixImage;
+    if ( typeof this != 'undefined' ) {
+        this.MegaPixImage = MegaPixImage;
+    } else {
+        window.MegaPixImage = MegaPixImage;
+    }
   }
 
 })();
+
 
 /*!
  * Color Thief v2.0
@@ -5318,6 +5327,10 @@ crop.directive('imgCrop', ['$timeout', 'cropHost', 'cropPubSub', function($timeo
     } else if (typeof exports === 'object') {
         module.exports = ColorThief; // for CommonJS
     } else {
-        this.ColorThief = ColorThief;
+        if ( typeof this != 'undefined' ) {
+            this.ColorThief = ColorThief;
+        } else {
+            window.ColorThief = ColorThief;
+        }
     }
-}.call(window));
+}.call(this));

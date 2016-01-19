@@ -257,7 +257,11 @@
   } else if (typeof exports === 'object') {
     module.exports = MegaPixImage; // for CommonJS
   } else {
-    this.MegaPixImage = MegaPixImage;
+    if ( typeof this != 'undefined' ) {
+        this.MegaPixImage = MegaPixImage;
+    } else {
+        window.MegaPixImage = MegaPixImage;
+    }
   }
 
 })();
